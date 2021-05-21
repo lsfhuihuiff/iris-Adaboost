@@ -106,6 +106,7 @@ X,Y = create_data()
 X_train, X_test, Y_train, Y_test = train_test_split( X, Y, test_size=0.2, random_state=42)
 
 classifierArray = adaBoostTrainDS(X_train,Y_train,10)
+print(classifierArray)
 prediction = adaClassify(X_test,classifierArray)
 print ('错误率：',1.0*sum(prediction!=mat(Y_test).T)/len(prediction))
 
